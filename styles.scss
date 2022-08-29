@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+  font-style: normal;
+  margin: 0;
+}
+
+$black: #21212b;
+$black3: #3e3e3e;
+
+$yellow: #db9b3c;
+
+//media query
+$desktopHD: 1920px;
+$desktopMedium: 1600px;
+$largeDevices: 1200px;
+$mediumDevices: 992px;
+$smallDevices: 768px;
+$extraSmall: 576px;
+
+html {
+  height: 100vh;
+  font-size: 18px;
+  overflow-x: hidden;
+
+  @media (max-width: $desktopHD) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $desktopMedium) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $largeDevices) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $mediumDevices) {
+    font-size: 10px;
+  }
+
+  @media (max-width: $smallDevices) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $extraSmall) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  border-radius: 1.25rem; //24px;
+  margin: 0 12rem; //0 216px;
+  position: relative;
+
+  @media (max-width: $smallDevices) {
+    max-width: 100%;
+    margin: 0 5rem;
+  }
+
+  @media (max-width: $extraSmall) {
+    max-width: 100%;
+    margin: 0 2.5rem;
+  }
+}
+
+.header {
+  color: $black3;
+  font-size: 3.1rem; //56px;
+  font-weight: 500;
+  line-height: 3.6rem; //65.74px;
+
+  letter-spacing: 0em;
+  text-align: left;
+  width: 30rem; //572px;;
+  text-transform: uppercase;
+
+  .emphasis {
+    color: $yellow;
+  }
+
+  @media (max-width: $smallDevices) {
+    font-size: 1.5rem; //56px;
+    line-height: 1.75rem; //65.74px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1.8rem; //33px;;
+  grid-column-gap: 1.8rem; //33px;;
+  margin-top: 3.5rem; //63px;
+
+  @media (max-width: $smallDevices) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2.5rem; //63px;
+  }
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.benefit-icon {
+  display: inline;
+  width: 53px;
+  height: 51px;
+
+  @media (max-width: $smallDevices) {
+    width: 38px;
+    height: 33px;
+  }
+}
+
+.benefit-text {
+  font-size: 1.1rem;
+  line-height: 140%;
+  width: 60%;
+
+  @media (max-width: $smallDevices) {
+    width: 100%;
+  }
+}
+
+.benefit-photo-container {
+  position: relative;
+  width: 87%;
+  margin-top: 2.5rem;
+
+  @media (max-width: $smallDevices) {
+    width: 100%;
+  }
+}
+
+.benefit-photo {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.benefit-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11.5rem;
+
+  @media (max-width: $smallDevices) {
+    width: 4.8rem;
+  }
+}
